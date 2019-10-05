@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	int ht,i,j;
+	float avg,avg1,s,s1;
+	char ch,code;
+	i=0;
+	j=0;
+	s=0;
+	s1=0;
+	do
+	{
+		printf("Enter Height In cm=\n");
+		scanf("%d",&ht);
+		printf("Enter Sex Code M/F=\n");
+		code=getche();
+		if(code=='m')
+		{
+			s=s+ht;
+			i++;
+		}
+		if(code=='f')
+		{
+			s1=s1+ht;
+			j++;
+		}
+		printf("Do You Want To Enter More Records Press Y/N\n");
+		ch=getche();
+	}
+	while(ch=='y');
+	{
+		avg=s/i;
+		avg1=s1/j;
+	}
+	printf("\nMale Average Height=%f",avg);
+	printf("\nFemale Average Height=%f",avg1);
+}
